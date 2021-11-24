@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=Simple Runner
+Comment=A simple example of a runner
+X-KDE-ServiceTypes=Plasma/Runner
+Type=Service
+Icon=checkmark
+X-KDE-PluginInfo-Author=$authorName
+X-KDE-PluginInfo-Email=$authorEmail
+X-KDE-PluginInfo-Name=plugin_name
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=LGPL
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-API=DBus
+X-Plasma-DBusRunner-Service=com.example.plugin_name
+X-Plasma-DBusRunner-Path=/plugin_name
