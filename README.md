@@ -13,26 +13,62 @@ and the Flutter guide for
 
 A user-friendly API for KDE's KRunner application.
 
+
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Create KRunner plugins ("runners")
+  - Type safe
+  - Null safe
+  - Named parameters
+  - Documentation explaining the various parts
 
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+### Creating plugins
 
 ```dart
-const like = 'sample';
+import 'package:krunner/krunner.dart';
+
+Future<void> main() async {
+  /// Create a runner instance.
+  final runner = KRunnerPlugin(
+    identifier: 'com.example.plugin_name',
+    name: '/plugin_name',
+    matchQuery: (String query) async {
+      /// If the KRunner query matches exactly `hello` we return a match.
+      if (query == 'hello') {
+        return [
+          QueryMatch(
+            id: 'uniqueMatchId',
+            title: 'This is presented to the user',
+            icon: 'checkmark',
+            rating: QueryMatchRating.exact,
+            relevance: 1.0,
+            properties: QueryMatchProperties(subtitle: 'Subtitle for match'),
+          ),
+        ];
+      } else {
+        return []; // Empty response (no matches).
+      }
+    },
+    retrieveActions: () async => [
+      SecondaryAction(
+        id: 'uniqueActionId',
+        text: 'hoverText',
+        icon: 'addressbook-details',
+      ),
+    ],
+    runAction: ({required String actionId, required String matchId}) async {
+      if (actionId == 'uniqueActionId') {
+        print('User clicked secondary action!');
+      }
+    },
+  );
+
+  /// Start the runner.
+  await runner.init();
+}
 ```
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+Refer to the `example` directory for more.
