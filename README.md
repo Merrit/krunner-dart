@@ -72,3 +72,8 @@ Future<void> main() async {
 ```
 
 Refer to the `example` directory for more.
+
+
+## Additional Information
+
+[API Documentation](https://pub.dev/documentation/krunner/latest/)
