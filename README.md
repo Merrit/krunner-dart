@@ -71,7 +71,10 @@ Future<void> main() async {
 }
 ```
 
-Refer to the `example` directory for more.
+Refer to the `example` directory for a complete example, including instructions
+for debugging and installing plugins.
+
+For a real-world example of a plugin made with this API see [VSCode Runner](https://github.com/Merrit/vscode-runner).
 
 
 ## Additional Information
