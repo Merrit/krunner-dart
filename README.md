@@ -79,4 +79,4 @@ For a real-world example of a plugin made with this API see [VSCode Runner](http
 
 ## Additional Information
 
-[API Documentation](https://pub.dev/documentation/krunner/latest/)
+[API Documentation](https://pub.dev/documentation/krunner/latest/krunner/krunner-library.html)
