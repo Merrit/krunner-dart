@@ -24,7 +24,7 @@ Future<void> main(List<String> arguments) async {
 ///
 /// If we don't check KRunner will just launch a new instance every time.
 Future<void> checkIfAlreadyRunning() async {
-  final result = await Process.run('pidof', ['vscode_runner']);
+  final result = await Process.run('pidof', ['time_runner']);
   final hasError = result.stderr != '';
   if (hasError) {
     print('Issue checking for existing process: ${result.stderr}');
