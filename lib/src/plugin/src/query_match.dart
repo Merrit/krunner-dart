@@ -123,9 +123,6 @@ class QueryMatchProperties {
   });
 
   DBusDict toDBusDict() {
-    return DBusDict(
-      DBusSignature('s'),
-      DBusSignature('v'),
-    );
+    return DBusDict.stringVariant({});
   }
 }

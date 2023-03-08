@@ -170,39 +170,27 @@ class KRunnerDBusInterface extends DBusObject {
 
   /// Convert a [QueryMatchProperties] object to the DBus dict representation.
   DBusDict _propertiesToDBusDict(QueryMatchProperties? properties) {
-    final emptyDict = DBusDict(DBusSignature('s'), DBusSignature('v'));
+    final emptyDict = DBusDict.stringVariant({});
     if (properties == null) return emptyDict;
-    final children = <DBusString, DBusVariant>{};
+    final children = <String, DBusValue>{};
 
     if (properties.actions != null) {
-      children[DBusString('actions')] = DBusVariant(
-        DBusArray.string(properties.actions!),
-      );
+      children['actions'] = DBusArray.string(properties.actions!);
     }
 
     if (properties.category != null) {
-      children[DBusString('category')] = DBusVariant(
-        DBusString(properties.category!),
-      );
+      children['category'] = DBusString(properties.category!);
     }
 
     if (properties.mimetypes != null) {
-      children[DBusString('urls')] = DBusVariant(
-        DBusArray.string(properties.mimetypes!),
-      );
+      children['urls'] = DBusArray.string(properties.mimetypes!);
     }
 
     if (properties.subtitle != null) {
-      children[DBusString('subtext')] = DBusVariant(
-        DBusString(properties.subtitle!),
-      );
+      children['subtext'] = DBusString(properties.subtitle!);
     }
 
-    return DBusDict(
-      DBusSignature('s'),
-      DBusSignature('v'),
-      children,
-    );
+    return DBusDict.stringVariant(children);
   }
 
   /// Gather the available secondary actions from the runner and
@@ -230,8 +218,8 @@ class KRunnerDBusInterface extends DBusObject {
   Future<DBusMethodSuccessResponse> _runAction(List<DBusValue> args) async {
     if (args.isEmpty) return DBusMethodSuccessResponse();
     await runActionCallback(
-      matchId: args[0].toNative() as String,
-      actionId: args[1].toNative() as String,
+      matchId: args[0].toString(),
+      actionId: args[1].toString(),
     );
     return DBusMethodSuccessResponse();
   }
