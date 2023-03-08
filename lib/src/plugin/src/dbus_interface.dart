@@ -37,7 +37,7 @@ class KRunnerDBusInterface extends DBusObject {
   /// `Array(Struct{String, String, String, int, double, Dict{String: Variant(String)}})`
   ///
   /// This interface will convert to/from this format to [QueryMatch].
-  final _matchInrospectMethod = DBusIntrospectMethod(
+  final _matchIntrospectMethod = DBusIntrospectMethod(
     'Match',
     args: [
       DBusIntrospectArgument(
@@ -62,7 +62,7 @@ class KRunnerDBusInterface extends DBusObject {
   ///
   /// Each item in the return value is a `Struct` of strings that
   /// correspond to `{ID, Text, IconName}`.
-  final _actionsInrospectMethod = DBusIntrospectMethod(
+  final _actionsIntrospectMethod = DBusIntrospectMethod(
     'Actions',
     args: [
       DBusIntrospectArgument(
@@ -87,7 +87,7 @@ class KRunnerDBusInterface extends DBusObject {
   ///
   /// `actionId` is the ID of a secondary action to run. For the "default"
   /// action this will be empty.
-  final _runInrospectMethod = DBusIntrospectMethod(
+  final _runIntrospectMethod = DBusIntrospectMethod(
     'Run',
     args: [
       DBusIntrospectArgument(
@@ -114,9 +114,9 @@ class KRunnerDBusInterface extends DBusObject {
       DBusIntrospectInterface(
         'org.kde.krunner1',
         methods: [
-          _matchInrospectMethod,
-          _actionsInrospectMethod,
-          _runInrospectMethod,
+          _matchIntrospectMethod,
+          _actionsIntrospectMethod,
+          _runIntrospectMethod,
         ],
       )
     ];
