@@ -2,10 +2,13 @@ name: krunner
 version: 0.2.0
 description: A user-friendly API for KDE's KRunner application. Provides a simple and reliable way to write krunner plugins, also known  as \\"runners\\".
 repository: https://github.com/Merrit/krunner-dart
-environment: 
-  sdk: '>=2.14.0 <3.0.0'
-dependencies: 
+
+environment:
+  sdk: ">=2.14.0 <3.0.0"
+
+dependencies:
   dbus: ^0.7.8
-dev_dependencies: 
+
+dev_dependencies:
   lints: ^1.0.0
   test: ^1.16.0
