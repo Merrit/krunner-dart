@@ -36,6 +36,8 @@ plugin by running the following in a terminal:
 qdbus org.kde.krunner /App org.kde.krunner.App.displaySingleRunner time_runner
 ```
 
+![KRunner with time_runner plugin](example.png)
+
 
 ## Uninstall plugin
 
