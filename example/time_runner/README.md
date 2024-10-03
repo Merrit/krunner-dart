@@ -1,6 +1,6 @@
 ## Compile plugin to self-contained executable
 
-From project root folder run:
+From project root folder (eg. `example/time_runner/`) run:
 
 ```bash
 dart pub get
