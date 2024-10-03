@@ -27,6 +27,15 @@ package/install.sh
   - `Shift` + `Enter` (or clicking the icon on the right side of the results)
     will show a notification with the local timezone.
 
+### Tip 🌟
+
+You can launch KRunner in single runner mode so it only shows results from this 
+plugin by running the following in a terminal:
+
+```bash
+qdbus org.kde.krunner /App org.kde.krunner.App.displaySingleRunner time_runner
+```
+
 
 ## Uninstall plugin
 
