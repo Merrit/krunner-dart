@@ -8,7 +8,7 @@
 /// supply a list of actions this runner can take, and running an action.
 ///
 /// See the example directory for simple examples.
-library krunner;
+library;
 
 import 'package:krunner/src/plugin/krunner_plugin.dart';
 
