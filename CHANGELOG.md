@@ -1,3 +1,8 @@
+# 1.0.0
+
+- Updated SDK version to support Dart 3.0.0 and higher
+- Updated documentation and examples
+
 # 0.2.0
 
 - Updated dbus package dependency
