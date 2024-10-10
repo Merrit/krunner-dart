@@ -130,7 +130,7 @@ class KRunnerDBusInterface extends DBusObject {
       case 'Actions':
         return await _getActions();
       case 'Run':
-        return await _runAction(methodCall.values);
+        return await _runAction(methodCall.values.cast<DBusString>());
       default:
         return DBusMethodErrorResponse.unknownMethod();
     }
@@ -215,11 +215,11 @@ class KRunnerDBusInterface extends DBusObject {
   }
 
   /// Pass the message from KRunner for this runner to run an action.
-  Future<DBusMethodSuccessResponse> _runAction(List<DBusValue> args) async {
+  Future<DBusMethodSuccessResponse> _runAction(List<DBusString> args) async {
     if (args.isEmpty) return DBusMethodSuccessResponse();
     await runActionCallback(
-      matchId: args[0].toString(),
-      actionId: args[1].toString(),
+      matchId: args[0].value,
+      actionId: args[1].value,
     );
     return DBusMethodSuccessResponse();
   }
