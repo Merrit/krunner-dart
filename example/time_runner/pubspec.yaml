@@ -1,13 +1,15 @@
 name: time_runner
 description: A KRunner plugin to tell the current time.
 version: 1.0.0
+publish_to: "none"
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   desktop_notifications: ^0.6.1
-  krunner: ^1.0.0
+  krunner:
+    path: ../../
 
 dev_dependencies:
   lints: ^5.0.0
