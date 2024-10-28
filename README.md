@@ -16,12 +16,18 @@ A user-friendly API for KDE's KRunner application.
 
 ## Features
 
-- Create KRunner plugins ("runners")
-  - Type safe
-  - Null safe
-  - Named parameters
-  - Documentation explaining the various parts
+- Type safe
+- Null safe
+- Named parameters
+- [API Documentation](https://pub.dev/documentation/krunner/latest/krunner/krunner-library.html)
 
+### Documentation in tooltips
+
+![Documentation in tooltips](https://raw.githubusercontent.com/Merrit/krunner-dart/refs/heads/main/assets/videos/promo/intellisense.gif)
+
+### Code completion
+
+![Code completion](https://raw.githubusercontent.com/Merrit/krunner-dart/refs/heads/main/assets/videos/promo/code_completion.gif)
 
 ## Usage
 
