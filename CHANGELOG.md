@@ -1,3 +1,7 @@
+# 1.0.2
+
+- Several improvements to the README
+
 # 1.0.1
 
 - Set the example project to use the local package, not the published one
