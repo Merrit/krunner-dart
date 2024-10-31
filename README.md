@@ -87,6 +87,14 @@ popups, the [API Documentation](https://pub.dev/documentation/krunner/latest/kru
 is available online.
 
 
+## Installing
+
+Add to dependencies:
+
+```
+dart pub add krunner
+```
+
 ## Support
 
 If you encounter any issues or have any questions, please file an issue on the 
