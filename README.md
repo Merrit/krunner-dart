@@ -10,6 +10,19 @@ Unlike the C++ or Python APIs, KRunner Dart provides code completion and
 documentation in tooltips for a better development experience.
 
 
+- [KRunner Dart](#krunner-dart)
+  - [Features](#features)
+    - [Documentation in tooltips](#documentation-in-tooltips)
+    - [Code completion](#code-completion)
+  - [Usage](#usage)
+    - [Creating plugins](#creating-plugins)
+  - [Documentation](#documentation)
+  - [Installing](#installing)
+  - [Support](#support)
+  - [License](#license)
+  - [Contributing](#contributing)
+
+
 ## Features
 
 - Type safe
